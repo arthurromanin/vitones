@@ -73,9 +73,12 @@ body {
 .about-image {
     flex: 1;
     display: flex;
+    position: relative;
+    z-index: 1;
 }
 
 .about-image img {
+    /* max-width: 80%; */
     max-width: 100%;
     height: auto;
     border-bottom-left-radius: 12px;
@@ -225,34 +228,56 @@ body {
 
 .cards-conteiner {
     inline-size: auto;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+    padding: 50px;
 }
 
 .card-1 {
     background-color: #0E47B2;
+    max-width: 300px;
 }
 
 .card-1 h4 {
     color: #DDDDDD;
 }
 
+.card-1 .lyrics {
+    color: #070707;
+}
+
 .card-2 {
     background-color: #700EB2;
+    max-width: 300px;
 }
 
 .card-2 h4 {
     color: #DDDDDD;
 }
 
+.card-2 .lyrics {
+    color: #070707;
+}
+
 .card-3 {
     background-color: #B20E76;
+    max-width: 300px;
 }
 
 .card-3 h4 {
     color: #DDDDDD;
 }
 
-.lyrics {
+.card-3 .lyrics {
     color: #070707;
+}
+
+.card-1, .card-2, .card-3 {
+    max-width: 300px;
+    flex: 1; 
+    border-radius: 12px;
 }
 
 .footer {
