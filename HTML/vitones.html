@@ -6,24 +6,27 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Vitones - Aulas Particulares</title>
     <link rel="stylesheet" href="../CSS/vitones.css">
-    <link rel="favicon" href="">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@0,100..700;1,100..700&display=swap"
-        rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@0,100..700;1,100..700&display=swap" rel="stylesheet">
 </head>
 
 <body>
 
-    <nav class="navbar">
+    <!-- ======================== NAVBAR ======================== -->
+    <nav class="navbar" id="navbar">
         <div class="navbar-conteiner">
             <a href="vitones.html">
-                <img src="/images/icone-de-nota-de-musica-em-estilo-plano-ilustracao-de-midia-de-som-em-fundo-transparente-isolado-conceito-de-negocio-de-nota-de-audio_157943-41519.avif"
+                <img src="/images/icon-guitar.png"
                     alt="Logo" class="logo">
             </a>
 
-            <div class="nav-menu">
+            <button class="hamburger" id="hamburger" aria-label="Menu">
+                <span></span><span></span><span></span>
+            </button>
+
+            <div class="nav-menu" id="nav-menu">
                 <ul class="nav-links">
                     <li><a href="#about-me">Sobre mim</a></li>
                     <li><a href="#exp">Experiência</a></li>
@@ -35,111 +38,143 @@
         </div>
     </nav>
 
+    <!-- ======================== HOME IMAGE ======================== -->
     <section class="home-image">
         <img src="/images/WhatsApp Image 2026-01-15 at 23.27.57.jpeg" alt="Home">
+        <div class="home-text">
+            <h1>Aprenda música de verdade</h1>
+            <p>Aulas particulares com metodologia personalizada para todos os níveis.</p>
+            <a href="#contact" class="btn-cta">Quero uma aula</a>
+        </div>
     </section>
 
+    <!-- ======================== SOBRE MIM ======================== -->
     <section class="about-me" id="about-me">
         <div class="about-image">
             <img src="/images/teste.jpeg" alt="Victor">
         </div>
-
         <div class="about-text">
-            <h1>Professor</h1>
-
+            <h2 class="section-title">Professor</h2>
             <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Porro ipsam fugiat facere, obcaecati eveniet,
                 nesciunt modi dolorum quam minus optio accusantium delectus non impedit harum illum odit alias nam
                 explicabo. Lorem ipsum dolor sit amet consectetur adipisicing elit. Porro ipsam fugiat facere, obcaecati
-                eveniet,
-                nesciunt modi dolorum quam minus optio accusantium delectus non impedit harum illum odit alias nam
-                explicabo.</p>
+                eveniet, nesciunt modi dolorum quam minus optio accusantium delectus non impedit harum illum odit alias
+                nam explicabo.</p>
         </div>
     </section>
 
+    <!-- ======================== EXPERIÊNCIA ======================== -->
     <section class="exp" id="exp">
         <div class="exp-text">
-            <h1>Experiência</h1>
+            <h2 class="section-title">Experiência</h2>
             <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Porro ipsam fugiat facere, obcaecati eveniet,
                 nesciunt modi dolorum quam minus optio accusantium delectus non impedit harum illum odit alias nam
-                explicabo. </p>
+                explicabo.</p>
         </div>
-
         <div class="exp-img">
             <img src="/images/show.jpeg" alt="Tocando Guitarra">
         </div>
     </section>
 
+    <!-- ======================== AULAS ======================== -->
     <section class="classes" id="classes">
         <div class="class-conteiner">
-            <h1>Sobre as aulas</h1>
-            <div class="class-content">
-                <div class="tabs">
-                    <button class="tab-active" data-tab="metodologia">Metodologia</button>
-                    <button class="tab" data-tab="instrumentos">Instrumentos</button>
-                    <button class="tab" data-tab="localizacao">Localização</button>
-                </div>
+            <h2 class="section-title" style="margin-bottom: 3.5rem;">Sobre as aulas</h2>
 
-                <div class="tab-contents">
-                    <div class="content-active" id="metodologia">
-                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Recusandae ducimus quis praesentium
-                            aspernatur, cupiditate aperiam accusamus. Ex fugit obcaecati facilis tenetur aperiam numquam
-                            laboriosam! In architecto hic animi possimus vel.</p>
-                    </div>
-
-                    <div class="content" id="instrumentos">
-                        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Aliquid minus suscipit sed
-                            blanditiis
-                            vitae, non aut, nesciunt maiores consequatur possimus quidem ut in earum excepturi quod
-                            eligendi
-                            aspernatur fuga perspiciatis?</p>
-                    </div>
-
-                    <div class="content" id="localizacao">
-                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Consectetur nam nemo rem cum velit!
-                            Accusantium ducimus fuga ut rerum quod pariatur non nam ratione. Sunt quis alias soluta
-                            animi
-                            at!</p>
-                    </div>
-                </div>
-            </div>
-    </section>
-
-    <section class="prices" id="prices">
-        <h1>Estruturação de preços</h1>
-        <div class="cards-conteiner">
-            <div class="card-1">
-                <div class="card-content">
-                    <h4>Aula experimental</h4>
-                    <h4>Preço: R$25,00</h4>
-                    <h4 class="lyrics">Duração: 30min/aula</h4>
-                </div>
+            <div class="tabs">
+                <button class="tab-active" data-tab="metodologia">Metodologia</button>
+                <button data-tab="instrumentos">Instrumentos</button>
+                <button data-tab="localizacao">Localização</button>
             </div>
 
-            <div class="card-2">
-                <div class="card-content">
-                    <h4>Aula isolada</h4>
-                    <h4>Preço: R$75,00</h4>
-                    <h4 class="lyrics">Duração: 60min/aula</h4>
+            <div class="tab-contents">
+                <div class="content-active" id="metodologia">
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Recusandae ducimus quis praesentium
+                        aspernatur, cupiditate aperiam accusamus. Ex fugit obcaecati facilis tenetur aperiam numquam
+                        laboriosam! In architecto hic animi possimus vel.</p>
                 </div>
-            </div>
-
-            <div class="card-3">
-                <div class="card-content">
-                    <h4>Pacote 4 aulas/mês</h4>
-                    <h4>Preço: R$200,00</h4>
-                    <h4 class="lyrics">Duração: 60min/aula</h4>
+                <div class="content" id="instrumentos">
+                    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Aliquid minus suscipit sed blanditiis
+                        vitae, non aut, nesciunt maiores consequatur possimus quidem ut in earum excepturi quod eligendi
+                        aspernatur fuga perspiciatis?</p>
+                </div>
+                <div class="content" id="localizacao">
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Consectetur nam nemo rem cum velit!
+                        Accusantium ducimus fuga ut rerum quod pariatur non nam ratione. Sunt quis alias soluta animi
+                        at!</p>
                 </div>
             </div>
         </div>
     </section>
 
+    <!-- ======================== PREÇOS ======================== -->
+    <section class="prices" id="prices">
+        <h2 class="section-title" style="margin-bottom: 4rem;">Estruturação de preços</h2>
+        <div class="cards-conteiner">
+
+            <div class="card-1">
+                <div class="card-thumb">🎸</div>
+                <div class="card-info">
+                    <p class="card-title">Aula experimental</p>
+                    <p class="card-price">R$ 30,00</p>
+                    <span class="card-duration">30 min / aula</span>
+                </div>
+                <div class="card-player">
+                    <div class="player-btn">
+                        <svg viewBox="0 0 24 24" fill="#0E47B2"><path d="M8 5v14l11-7z"/></svg>
+                    </div>
+                    <div class="player-progress">
+                        <div class="progress-bar"><div class="progress-fill"></div></div>
+                        <div class="progress-time"><span>0:10</span><span>0:30</span></div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="card-2">
+                <div class="card-thumb">🎵</div>
+                <div class="card-info">
+                    <p class="card-title">Aula isolada</p>
+                    <p class="card-price">R$ 75,00</p>
+                    <span class="card-duration">60 min / aula</span>
+                </div>
+                <div class="card-player">
+                    <div class="player-btn">
+                        <svg viewBox="0 0 24 24" fill="#700EB2"><path d="M8 5v14l11-7z"/></svg>
+                    </div>
+                    <div class="player-progress">
+                        <div class="progress-bar"><div class="progress-fill"></div></div>
+                        <div class="progress-time"><span>0:35</span><span>1:00</span></div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="card-3">
+                <div class="card-thumb">🎶</div>
+                <div class="card-info">
+                    <p class="card-title">Pacote 4 aulas/mês</p>
+                    <p class="card-price">R$ 200,00</p>
+                    <span class="card-duration">60 min / aula</span>
+                </div>
+                <div class="card-player">
+                    <div class="player-btn">
+                        <svg viewBox="0 0 24 24" fill="#B20E76"><path d="M8 5v14l11-7z"/></svg>
+                    </div>
+                    <div class="player-progress">
+                        <div class="progress-bar"><div class="progress-fill"></div></div>
+                        <div class="progress-time"><span>0:48</span><span>1:00</span></div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- ======================== CONTATO ======================== -->
     <section class="contact" id="contact">
-        <h1>Entre em contato!</h1>
-
+        <h2 class="section-title" style="margin-bottom: 2.5rem; font-size: 3rem;">Entre em contato!</h2>
         <div class="contact-content">
-            <h3>Se interessou? Entre em contato pelo Whatsapp para entrar ou se desenvolver no mundo da música!</h3>
+            <h3>Se interessou? Entre em contato pelo WhatsApp para entrar ou se desenvolver no mundo da música!</h3>
             <h3>Espero por você:</h3>
-
             <div class="contact-number">
                 <ul>
                     <li>
@@ -151,13 +186,11 @@
         </div>
     </section>
 
+    <!-- ======================== FOOTER ======================== -->
     <footer class="footer">
-
         <div class="footer-logo">
-            <img src="/images/icone-de-nota-de-musica-em-estilo-plano-ilustracao-de-midia-de-som-em-fundo-transparente-isolado-conceito-de-negocio-de-nota-de-audio_157943-41519.avif"
-                alt="">
+            <img src="/images/icon-guitar.png" alt="Logo">
         </div>
-
         <div class="footer-menu">
             <ul>
                 <li><a href="#about-me">Sobre mim</a></li>
@@ -167,27 +200,84 @@
                 <li><a href="#contact">Contato</a></li>
             </ul>
         </div>
-
         <div class="footer-contact">
             <h4>Entre em contato</h4>
             <ul>
                 <li>
                     <i class="fab fa-whatsapp"></i>
-                    <a href="">+55 11 98933-3233</a>
+                    <a href="https://wa.me/5511989333233">+55 11 98933-3233</a>
                 </li>
-
                 <li>
                     <i class="fab fa-instagram"></i>
-                    <a href="https://www.instagram.com/vitao_lteixeira/">@vitao_lteixeira</a>
+                    <a href="https://www.instagram.com/vitao_lteixeira/" target="_blank">@vitao_lteixeira</a>
                 </li>
-
                 <li>
                     <i class="fas fa-envelope"></i>
-                    <a href="">victor30.lteixeira@gmail.com</a>
+                    <a href="mailto:victor30.lteixeira@gmail.com">victor30.lteixeira@gmail.com</a>
                 </li>
             </ul>
         </div>
     </footer>
-</body>
 
+    <!-- ======================== JS ======================== -->
+    <script>
+        // Navbar scroll
+        const navbar = document.getElementById('navbar');
+        window.addEventListener('scroll', () => {
+            navbar.classList.toggle('scrolled', window.scrollY > 80);
+        });
+
+        // Tabs
+        const tabButtons = document.querySelectorAll('.tabs button');
+        const tabContents = document.querySelectorAll('.tab-contents > div');
+
+        tabButtons.forEach(btn => {
+            btn.addEventListener('click', () => {
+                const target = btn.dataset.tab;
+                tabButtons.forEach(b => b.classList.remove('tab-active'));
+                tabContents.forEach(c => {
+                    c.classList.remove('content-active');
+                    c.classList.add('content');
+                });
+                btn.classList.add('tab-active');
+                const el = document.getElementById(target);
+                el.classList.remove('content');
+                el.classList.add('content-active');
+            });
+        });
+
+        // Hamburger
+        const hamburger = document.getElementById('hamburger');
+        const navMenu = document.getElementById('nav-menu');
+
+        hamburger.addEventListener('click', () => {
+            hamburger.classList.toggle('open');
+            navMenu.classList.toggle('open');
+        });
+
+        document.querySelectorAll('.nav-links a').forEach(link => {
+            link.addEventListener('click', () => {
+                hamburger.classList.remove('open');
+                navMenu.classList.remove('open');
+            });
+        });
+
+        // Smooth scroll com offset da navbar
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function(e) {
+                const id = this.getAttribute('href');
+                if (id === '#') return;
+                const el = document.querySelector(id);
+                if (!el) return;
+                e.preventDefault();
+                const offset = navbar.offsetHeight + 16;
+                window.scrollTo({
+                    top: el.getBoundingClientRect().top + window.scrollY - offset,
+                    behavior: 'smooth'
+                });
+            });
+        });
+    </script>
+
+</body>
 </html>
