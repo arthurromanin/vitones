@@ -618,6 +618,10 @@ summary:focus-visible {
 .card-2 { background-color: #700EB2; }
 .card-3 { background-color: #B20E76; }
 
+.card-1.reveal { transition-delay: 0s; }
+.card-2.reveal { transition-delay: 0.15s; }
+.card-3.reveal { transition-delay: 0.3s; }
+
 .card-featured {
     outline: 2px solid var(--roxo-neon);
     outline-offset: 4px;
@@ -709,13 +713,8 @@ summary:focus-visible {
     justify-content: center;
     flex-shrink: 0;
     box-shadow: 0 4px 14px rgba(0,0,0,0.35);
-    transition: transform 0.2s ease;
 }
- 
-.card-1:hover .player-btn,
-.card-2:hover .player-btn,
-.card-3:hover .player-btn { transform: scale(1.14); }
- 
+
 .player-btn svg { width: 14px; height: 14px; margin-left: 2px; }
  
 .player-progress {
