@@ -28,7 +28,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@0,100..700;1,100..700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@0,100..700;1,100..700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
 
     <!-- SUBSTITUIR: confirme nome, cidade/região e valores antes de publicar -->
     <script type="application/ld+json">
@@ -85,6 +85,9 @@
             <p>Aulas particulares com metodologia personalizada para todos os níveis.</p>
             <a href="#contact" class="btn-cta">Quero uma aula</a>
         </div>
+        <a href="#stats" class="scroll-cue" aria-label="Rolar para ver mais">
+            <i class="fa-solid fa-chevron-down"></i>
+        </a>
     </section>
 
     <!-- ======================== NÚMEROS / CREDIBILIDADE ========================
@@ -93,15 +96,15 @@
     <section class="stats reveal" id="stats" aria-label="Números">
         <div class="stats-container">
             <div class="stat-item">
-                <span class="stat-number" data-count="10">0</span><span class="stat-suffix">+</span>
+                <span class="stat-value"><span class="stat-number" data-count="10">0</span><span class="stat-suffix">+</span></span>
                 <span class="stat-label">Anos de experiência</span>
             </div>
             <div class="stat-item">
-                <span class="stat-number" data-count="80">0</span><span class="stat-suffix">+</span>
+                <span class="stat-value"><span class="stat-number" data-count="80">0</span><span class="stat-suffix">+</span></span>
                 <span class="stat-label">Alunos ensinados</span>
             </div>
             <div class="stat-item">
-                <span class="stat-number" data-count="5" data-decimal="true">0</span><span class="stat-suffix">★</span>
+                <span class="stat-value"><span class="stat-number" data-count="5" data-decimal="true">0</span><span class="stat-suffix">★</span></span>
                 <span class="stat-label">Avaliação média</span>
             </div>
         </div>
@@ -166,7 +169,7 @@
 
     <!-- ======================== PREÇOS ======================== -->
     <section class="prices reveal" id="prices">
-        <h2 class="section-title section-title--prices">Estruturação de preços</h2>
+        <h2 class="section-title section-title--prices">Escolha seu plano</h2>
         <!-- SUBSTITUIR: confirme se esta frase reflete a realidade antes de publicar -->
         <p class="prices-note">Atendo poucos alunos por vez para dar atenção individual de verdade — vagas limitadas por semana.</p>
         <div class="cards-container">
@@ -238,17 +241,26 @@
             <div class="testimonial-card">
                 <div class="testimonial-stars" aria-hidden="true">★★★★★</div>
                 <p class="testimonial-quote">"Em poucos meses já estava tocando as músicas que sempre quis. Aulas super didáticas!"</p>
-                <p class="testimonial-author">— Arthur Romanin</p>
+                <div class="testimonial-footer">
+                    <span class="testimonial-avatar testimonial-avatar--1" aria-hidden="true">A</span>
+                    <span class="testimonial-author">Arthur Romanin</span>
+                </div>
             </div>
             <div class="testimonial-card">
                 <div class="testimonial-stars" aria-hidden="true">★★★★★</div>
                 <p class="testimonial-quote">"Professor atencioso, no meu ritmo. Recomendo muito pra quem quer começar do zero."</p>
-                <p class="testimonial-author">— Ana Nakamura</p>
+                <div class="testimonial-footer">
+                    <span class="testimonial-avatar testimonial-avatar--2" aria-hidden="true">A</span>
+                    <span class="testimonial-author">Ana Nakamura</span>
+                </div>
             </div>
             <div class="testimonial-card">
                 <div class="testimonial-stars" aria-hidden="true">★★★★★</div>
                 <p class="testimonial-quote">"Melhor investimento que fiz pra minha música. Evolução visível em pouco tempo."</p>
-                <p class="testimonial-author">— Guilherme Souza</p>
+                <div class="testimonial-footer">
+                    <span class="testimonial-avatar testimonial-avatar--3" aria-hidden="true">G</span>
+                    <span class="testimonial-author">Guilherme Souza</span>
+                </div>
             </div>
         </div>
     </section>

@@ -16,6 +16,7 @@
     --fundo-footer: #12052A;
     --branco: #FFFFFF;
     --cinza-claro: #DDDDDD;
+    --font-leitura: 'Inter', system-ui, sans-serif;
 }
  
 html {
@@ -30,7 +31,18 @@ body {
     line-height: 1.6;
     overflow-x: hidden;
 }
- 
+
+/* ========================
+   FOCO DE TECLADO
+======================== */
+a:focus-visible,
+button:focus-visible,
+summary:focus-visible {
+    outline: 2px solid var(--roxo-neon);
+    outline-offset: 3px;
+    border-radius: 4px;
+}
+
 /* ========================
    TÍTULOS — sublinhado curto (< metade)
    Técnica: usamos ::after em vez de border-bottom
@@ -264,6 +276,33 @@ body {
     transform: translateY(-2px);
 }
 
+.scroll-cue {
+    position: absolute;
+    left: 50%;
+    bottom: 2rem;
+    transform: translateX(-50%);
+    z-index: 2;
+    color: var(--cinza-claro);
+    font-size: 1.3rem;
+    opacity: 0.75;
+    transition: opacity 0.25s ease, color 0.25s ease;
+    animation: scrollCueBounce 2.2s ease-in-out infinite;
+}
+
+.scroll-cue:hover {
+    opacity: 1;
+    color: var(--roxo-neon);
+}
+
+@keyframes scrollCueBounce {
+    0%, 100% { transform: translateX(-50%) translateY(0); }
+    50%      { transform: translateX(-50%) translateY(8px); }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .scroll-cue { animation: none; }
+}
+
 /* ========================
    STATS / CREDIBILIDADE
 ======================== */
@@ -289,6 +328,11 @@ body {
     flex-direction: column;
     align-items: center;
     color: var(--branco);
+}
+
+.stat-value {
+    display: inline-flex;
+    align-items: baseline;
 }
 
 .stat-number,
@@ -364,10 +408,10 @@ body {
 }
  
 .about-text p {
+    font-family: var(--font-leitura);
     font-size: 1.05rem;
-    line-height: 2;
+    line-height: 1.85;
     color: #c0c0c0;
-    text-align: justify;
     max-width: 560px;
 }
  
@@ -394,10 +438,10 @@ body {
 }
  
 .exp-text p {
+    font-family: var(--font-leitura);
     font-size: 1.05rem;
-    line-height: 2;
+    line-height: 1.85;
     color: #c0c0c0;
-    text-align: justify;
     max-width: 560px;
 }
  
@@ -506,10 +550,11 @@ body {
  
 /* Conteúdo das tabs — maior, com mais respiro */
 .tab-contents {
-    font-size: 1.25rem;
+    font-family: var(--font-leitura);
+    font-size: 1.15rem;
     color: #b8b8b8;
     min-height: 160px;
-    line-height: 2.1;
+    line-height: 1.9;
     text-align: left;
     padding: 0 1rem;
     max-width: 780px;
@@ -565,15 +610,8 @@ body {
     max-width: 320px;
     border-radius: 12px;
     padding: 1.5rem 1.5rem 1.2rem;
-    transition: transform 0.35s cubic-bezier(0.34, 1.56, 0.64, 1), box-shadow 0.35s ease;
     position: relative;
     overflow: hidden;
-    cursor: pointer;
-}
-
-.card-1:hover, .card-2:hover, .card-3:hover {
-    transform: translateY(-10px);
-    box-shadow: 0 24px 50px rgba(0,0,0,0.6);
 }
 
 .card-1 { background-color: #0E47B2; }
@@ -643,7 +681,7 @@ body {
 }
  
 .card-info .card-duration {
-    color: #000;
+    color: var(--branco);
     font-size: 0.75rem;
     font-weight: 700;
     background: rgba(0,0,0,0.3);
@@ -847,11 +885,35 @@ body {
 }
 
 .testimonial-quote {
+    font-family: var(--font-leitura);
     color: #c0c0c0;
     font-size: 0.95rem;
-    line-height: 1.8;
+    line-height: 1.7;
     margin-bottom: 1.2rem;
 }
+
+.testimonial-footer {
+    display: flex;
+    align-items: center;
+    gap: 0.7rem;
+}
+
+.testimonial-avatar {
+    width: 34px;
+    height: 34px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--branco);
+    font-weight: 700;
+    font-size: 0.9rem;
+    flex-shrink: 0;
+}
+
+.testimonial-avatar--1 { background: #0E47B2; }
+.testimonial-avatar--2 { background: #700EB2; }
+.testimonial-avatar--3 { background: #B20E76; }
 
 .testimonial-author {
     color: var(--roxo-neon);
@@ -925,9 +987,10 @@ body {
 .faq-item[open] summary::after { transform: rotate(45deg); }
 
 .faq-item p {
+    font-family: var(--font-leitura);
     color: #b8b8b8;
-    font-size: 0.92rem;
-    line-height: 1.8;
+    font-size: 0.95rem;
+    line-height: 1.7;
     margin-top: 0.9rem;
 }
 
@@ -1063,7 +1126,7 @@ body {
     .exp-text p { max-width: 100%; }
 }
  
-@media (max-width: 900px) {
+@media (max-width: 1040px) {
     .hamburger { display: flex; }
 
     .nav-menu {
